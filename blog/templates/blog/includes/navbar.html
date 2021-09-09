@@ -1,0 +1,16 @@
+
+<nav>
+  <div class="nav-wrapper white">
+      <a href="/" class="brand-logo black-text" style="margin-left: 8px;font-family: 'Bangers';"> BLOG4ALL </a>
+      <ul id="slide-out" class="sidenav" style="left:0px">
+        <li><a href="/" class="black-text" style="margin: 22px;font-family: 'Bangers';font-size: 350%"> BLOG4ALL</a></li>
+        {% include 'blog/includes/navcontents.html' %}
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger black-text"><i class="material-icons">menu</i></a>
+      <!--HR-->
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><i class="material-icons prefix black-text">search</i>
+          {% include 'blog/includes/navcontents.html' %}
+      </ul>
+  </div>
+</nav>

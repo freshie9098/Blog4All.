@@ -1,0 +1,27 @@
+{% extends 'blog/header.html' %}
+
+{% block title %}
+  Profile - {{profile.username}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  {% if user == profile %}
+
+    <h3>Welcome, {{user.first_name}} {{user.last_name}}</h3> 
+    <p class = "right">Want to write a blog, <a href="{% url 'blog:addblog' %}" target="__blank"><b>click</b></a> here!</p>
+  <br><br>
+  {% endif %}
+  
+  <h5>Blogs by {{profile.first_name}} {{profile.last_name}}:</h5>
+  <br>
+
+  {% include 'blog/includes/bloglist.html' %}
+
+<!--HR-->
+</div>
+
+{% endblock %}
+
+

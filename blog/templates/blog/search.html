@@ -1,0 +1,13 @@
+{% extends 'blog/header.html' %}
+
+{% block title %}
+  Search Results - {{query}}
+{% endblock %}
+
+{% block content %}
+	<h2>Search Results for {{query}}:</h2>
+	<div class="row">
+    	{% include 'blog/includes/bloglist.html' %}
+  	</div>
+  {% include 'blog/includes/pagination.html' %}
+{% endblock %}
